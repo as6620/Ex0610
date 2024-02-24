@@ -33,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         mainLayout = findViewById(R.id.mainLayout);
 
     }
-
-
+    public void Click(View view) {
+        if (swDN.isChecked() && tb.isChecked()) {
+            mainLayout.setBackgroundColor(background1);
+        } else if (swDN.isChecked() && !tb.isChecked()) {
+            mainLayout.setBackgroundColor(background2);
+        } else if (!swDN.isChecked() && tb.isChecked()) {
+            mainLayout.setBackgroundColor(background3);
+        }else {
+            mainLayout.setBackgroundColor(background4);
+        }
+    }
 }
